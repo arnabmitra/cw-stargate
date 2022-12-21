@@ -144,6 +144,9 @@ name = "bytes"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c4872d67bab6358e59559027aa3b9157c53d9358c51423c17554809a8858e0f8"
+dependencies = [
+ "serde",
+]
 
 [[package]]
 name = "cfg-if"
@@ -159,9 +162,9 @@ checksum = "722e23542a15cea1f65d4a1419c4cfd7a26706c70871a13a04238ca3f40f1661"
 
 [[package]]
 name = "cosmos-sdk-proto"
-version = "0.14.0"
+version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "20b42021d8488665b1a0d9748f1f81df7235362d194f44481e2e61bf376b77b4"
+checksum = "c4776e787b24d9568dd61d3237eeb4eb321d622fb881b858c7b82806420e87d4"
 dependencies = [
  "prost 0.11.0",
  "prost-types",
@@ -317,13 +320,13 @@ dependencies = [
 name = "cw-stargate"
 version = "0.1.0"
 dependencies = [
- "cosmos-sdk-proto",
  "cosmwasm-schema",
  "cosmwasm-std",
  "cosmwasm-storage",
  "cw-multi-test",
  "cw-storage-plus",
  "cw2",
+ "provenance-sdk-proto",
  "schemars",
  "serde",
  "thiserror",
@@ -946,6 +949,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "provenance-sdk-proto"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d0aaddb1bee9dfc8f7ccadb615e1b02eded426ed9ef05e6e99ab6a2f80c01870"
+dependencies = [
+ "cosmos-sdk-proto",
+ "prost 0.11.0",
+ "prost-types",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1217,9 +1231,9 @@ checksum = "20518fe4a4c9acf048008599e464deb21beeae3d3578418951a189c235a7a9a8"
 
 [[package]]
 name = "tendermint-proto"
-version = "0.23.9"
+version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68ce80bf536476db81ecc9ebab834dc329c9c1509a694f211a73858814bfe023"
+checksum = "d5895470f28c530f8ae8c4071bf8190304ce00bd131d25e81730453124a3375c"
 dependencies = [
  "bytes",
  "flex-error",
